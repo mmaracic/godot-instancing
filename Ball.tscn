@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvsl70kspo0j4"]
+
+[ext_resource type="Texture2D" uid="uid://cwyhm457012m3" path="res://assets/ballMixed_10.png" id="1_2a7gy"]
+
+[sub_resource type="PhysicsMaterial" id="1"]
+
+[sub_resource type="CircleShape2D" id="2"]
+radius = 37.1452
+
+[node name="Ball" type="RigidBody2D"]
+physics_material_override = SubResource("1")
+gravity_scale = 4.0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2a7gy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("2")
